@@ -69,20 +69,18 @@ class Tree:
         if self[position].expanded:
             level += 1
             for element in queue:
-                self.show(element, level)  # recursive call
+                self.show(element, level)  
 
     def expand_tree(self, position, mode=_DEPTH):
-        # Python generator. Loosly based on an algorithm from 'Essential LISP' by
-        # John R. Anderson, Albert T. Corbett, and Brian J. Reiser, page 239-241
         yield position
         queue = self[position].fpointer
         while queue:
             yield queue[0]
             expansion = self[queue[0]].fpointer
             if mode is _DEPTH:
-                queue = expansion + queue[1:]  # depth-first
+                queue = expansion + queue[1:] 
             elif mode is _WIDTH:
-                queue = queue[1:] + expansion  # width-first
+                queue = queue[1:] + expansion  
 
     def is_branch(self, position):
         return self[position].fpointer
