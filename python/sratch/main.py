@@ -21,14 +21,10 @@ def handle_request(client_socket):
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server_socket:
     server_socket.bind((HOST, PORT))
 
-    # Listen for incoming connections
     server_socket.listen()
 
     print(f"Server listening on port {PORT}")
 
     while True:
-        # Accept a new client connection
         client_socket, address = server_socket.accept()
-
-        # Handle the client's request
         handle_request(client_socket)
