@@ -6,4 +6,5 @@ tree.create_node("/", "/")
 def add_path(path):
     split = path.split("/")
     for i in range(len(split)):
-        tree.create_node(i, i, parent="")
+        if i != 0:
+            tree.create_node(split[i], split[i], parent=split[i-1])
