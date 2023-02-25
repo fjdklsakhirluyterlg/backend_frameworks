@@ -14,3 +14,5 @@ def add_path(path):
         else:
             tree.create_node(split[i], split[i], parent="/")
 
+def gen_tree_from_file():
+    pass
