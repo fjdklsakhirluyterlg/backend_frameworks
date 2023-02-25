@@ -15,4 +15,6 @@ def add_path(path):
             tree.create_node(split[i], split[i], parent="/")
 
 def gen_tree_from_file():
-    pass
+    with open("paths.txt", "r") as file:
+        file = file.read()
+    lines = file.splitlines()
