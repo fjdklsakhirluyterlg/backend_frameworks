@@ -6,4 +6,6 @@ HOST = ''
 
 def handle_request(client_socket):
     request = client_socket.recv(BUFFER_SIZE).decode()
-    
+
+    request_lines = request.split('\r\n')
+    path = request_lines[0].split()[1]
