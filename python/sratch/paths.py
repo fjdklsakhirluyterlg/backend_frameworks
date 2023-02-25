@@ -20,4 +20,6 @@ def gen_tree_from_file():
     lines = file.splitlines()
     for line in lines:
         split = line.split("/")
-        
+        for sp, i in enumerate(split):
+            if i != 0:
+                tree.create_node()
