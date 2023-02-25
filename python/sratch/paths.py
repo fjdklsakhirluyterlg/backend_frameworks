@@ -18,3 +18,6 @@ def gen_tree_from_file():
     with open("paths.txt", "r") as file:
         file = file.read()
     lines = file.splitlines()
+    for line in lines:
+        split = line.split("/")
+        
