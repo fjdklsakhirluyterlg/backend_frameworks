@@ -24,4 +24,4 @@ def gen_tree_from_file():
             if i != 0:
                 tree.create_node(sp, sp, parent=split[i-1])
             else:
-                tree.create_node()
+                tree.create_node(sp, sp, parent="/")
