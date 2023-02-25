@@ -13,3 +13,7 @@ def handle_request(client_socket):
     path = request_lines[0].split()[1]
 
     response = f"HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\nHello, World!"
+
+    client_socket.sendall(response.encode())
+
+    client_socket.close()
