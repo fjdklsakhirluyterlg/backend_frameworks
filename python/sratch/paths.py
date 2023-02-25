@@ -25,3 +25,4 @@ def gen_tree_from_file():
                 tree.create_node(sp, sp, parent=split[i-1])
             else:
                 tree.create_node(sp, sp, parent="/")
+                
