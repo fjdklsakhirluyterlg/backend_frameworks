@@ -9,3 +9,5 @@ def index(request):
 def add_todo(request):
     if request.method == "POST":
         form = TodoForm(request.POST)
+        if form.is_valid():
+            title = form[]
