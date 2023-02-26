@@ -11,5 +11,5 @@ def file_upload_path(instance, filename):
 # Create your models here.
 
 class UploadedFile(models.Model):
-    file = models.FileField(upload_to='uploads/%Y/%m/%d/')
+    file = models.FileField(upload_to=file_upload_path)
     uploaded_at = models.DateTimeField(auto_now_add=True)
