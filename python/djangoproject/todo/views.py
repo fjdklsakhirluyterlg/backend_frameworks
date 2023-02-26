@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .forms import TodoForm
 
 # Create your views here.
 
@@ -7,4 +8,4 @@ def index(request):
 
 def add_todo(request):
     if request.method == "POST":
-        request.data
+        form = TodoForm(request.POST)
