@@ -1,5 +1,6 @@
 from pathlib import Path
 from flask import Blueprint, request, redirect, flash
+from werkzeug.security import secure_filename
 
 upload = Blueprint(__name__, "upload")
 
