@@ -10,3 +10,6 @@ from .models import UploadedFile
 def file(request):
     if request.method == "POST":
         form = DocumentForm(request.POST, request.FILES)
+        if form.is_valid():
+            instance = UploadedFile.objects.create()
+            file = UploadedFile
