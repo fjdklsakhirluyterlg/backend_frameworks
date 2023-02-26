@@ -16,3 +16,4 @@ def file(request):
             instance.save()
     else:
         form = DocumentForm()
+        return render(request)
