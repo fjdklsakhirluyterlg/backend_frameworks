@@ -3,5 +3,6 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('file', views.file, name="file")
+    path('file', views.file, name="file"),
+    path('success', views.success, name="success"),
 ]
