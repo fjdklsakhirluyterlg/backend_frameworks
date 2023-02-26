@@ -20,4 +20,5 @@ from hello.views import index
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("hello.urls"))
+    path('upload/', include("files.urls"))
 ]
