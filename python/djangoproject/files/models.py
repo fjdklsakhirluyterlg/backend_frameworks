@@ -14,3 +14,6 @@ class UploadedFile(models.Model):
     myfile = models.FileField(upload_to=file_upload_path)
     filename = models.CharField(max_length=255, blank=True, null=True)
     original_filename = models.CharField(max_length=255, blank=True, null=True)
+
+    def __str__(self):
+        return

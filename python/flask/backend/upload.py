@@ -7,3 +7,4 @@ upload = Blueprint(__name__, "upload")
 def upload_file():
     if request.method == "POST":
         files = request.files
+        
