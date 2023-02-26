@@ -38,7 +38,7 @@ def upload_file():
     </form>
     '''
 
-@app.route('/uploads/<name>')
+@routes.route('/uploads/<name>')
 def download_file(name):
     return send_from_directory(UPLOAD_FOLDER, name)
         
