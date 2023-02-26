@@ -21,4 +21,4 @@ def file(request):
             return form.errors
     else:
         form = DocumentForm()
-        return render(request, "upload.html")
+        return render(request, "upload.html", {"form":form})
