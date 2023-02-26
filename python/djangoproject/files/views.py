@@ -16,9 +16,9 @@ def file(request):
             instance = UploadedFile.objects.create()
             instance.myfile.save(request.FILES['filename'].name, request.FILES['file'])
             instance.save()
+            return HttpResponse("saved")
         else:
             return form.errors
-        return HttpResponse("saved")
     else:
         form = DocumentForm()
         return render(request, "upload.html", {"form":form})
