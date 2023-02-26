@@ -24,10 +24,10 @@ def upload_file():
     if file.filename == '':
             flash('No selected file')
             return redirect(request.url)
-        if file and allowed_file(file.filename):
-            filename = secure_filename(file.filename)
-            file.save(os.path.join(UPLOAD_FOLDER, filename))
-            return redirect(url_for('download_file', name=filename))
+    if file and allowed_file(file.filename):
+        filename = secure_filename(file.filename)
+        file.save(os.path.join(UPLOAD_FOLDER, filename))
+        return redirect(url_for('download_file', name=filename))
     return '''
     <!doctype html>
     <title>Upload new File</title>
