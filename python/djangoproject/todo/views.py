@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .forms import TodoForm
+from .models import Todo
 
 # Create your views here.
 
@@ -11,4 +12,4 @@ def add_todo(request):
         form = TodoForm(request.POST)
         if form.is_valid():
             title = form.cleaned_data["title"]
-            
+            instance = Todo(title)
