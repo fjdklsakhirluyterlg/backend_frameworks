@@ -13,8 +13,7 @@ def file(request):
     if request.method == "POST":
         form = DocumentForm(request.POST, request.FILES)
         if form.is_valid():
-            instance = UploadedFile.objects.create()
-            instance.myfile.save(request.FILES['filename'].name, request.FILES['file'])
+            instance = UploadedFile(request.FILES['filename'].name, request.FILES['file'])
             instance.save()
             return HttpResponse("saved")
         else:
