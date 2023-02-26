@@ -14,6 +14,9 @@ def allowed_file(filename):
 @upload.route("/upload")
 def upload_file():
     if request.method == "POST":
-        files = request.files
-
+        if 'file' not in request.files:
+            flash('No file part')
+            return redirect(request.url)
+        file = request.files['file']
+        
         
