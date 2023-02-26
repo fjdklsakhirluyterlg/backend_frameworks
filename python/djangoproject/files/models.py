@@ -13,3 +13,4 @@ def file_upload_path(instance, filename):
 class UploadedFile(models.Model):
     file = models.FileField(upload_to=file_upload_path)
     uploaded_at = models.DateTimeField(auto_now_add=True)
+    filename = models.CharField(max_length=255, blank=True, null=True)
