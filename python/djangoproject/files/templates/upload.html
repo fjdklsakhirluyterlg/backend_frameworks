@@ -3,5 +3,8 @@
         <title>Upload - django app</title>
     </head>
     <body>
-        <form action="/upload/file">
-            
+        <form action="/upload/file" method="POST">
+            {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
