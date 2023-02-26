@@ -21,3 +21,6 @@ def file(request):
     else:
         form = DocumentForm()
         return render(request, "upload.html", {"form":form})
+
+def success(request):
+    html = ""
