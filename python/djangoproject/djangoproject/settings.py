@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'api',
     'hello',
     'files',
+    'todo',
 ]
 
 MIDDLEWARE = [
