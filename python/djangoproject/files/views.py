@@ -4,6 +4,7 @@ from django.template import RequestContext
 from django.http import HttpResponseRedirect
 
 from .forms import DocumentForm
+from .models import UploadedFile
 # Create your views here.
 
 def file(request):
