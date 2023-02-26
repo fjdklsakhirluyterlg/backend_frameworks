@@ -11,3 +11,4 @@ def add_todo(request):
         form = TodoForm(request.POST)
         if form.is_valid():
             title = form.cleaned_data["title"]
+            
