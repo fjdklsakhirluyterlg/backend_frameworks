@@ -13,4 +13,4 @@ def file(request):
         if form.is_valid():
             instance = UploadedFile.objects.create()
             file = UploadedFile
-            instance.myfile.save('original_filename.txt', request.FILES['file'])
+            instance.myfile.save(request.FILES['filename'].name, request.FILES['file'])
