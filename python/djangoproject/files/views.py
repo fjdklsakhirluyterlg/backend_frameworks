@@ -14,3 +14,5 @@ def file(request):
             instance = UploadedFile.objects.create()
             instance.myfile.save(request.FILES['filename'].name, request.FILES['file'])
             instance.save()
+    else:
+        form = DocumentForm()
