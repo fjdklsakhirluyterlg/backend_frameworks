@@ -16,4 +16,4 @@ def file(request):
             instance.save()
     else:
         form = DocumentForm()
-        return render(request)
+        return render(request, "upload.html", {"form":form})
