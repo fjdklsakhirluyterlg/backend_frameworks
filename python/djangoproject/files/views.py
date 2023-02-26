@@ -23,4 +23,5 @@ def file(request):
         return render(request, "upload.html", {"form":form})
 
 def success(request):
-    html = ""
+    html = "<h1>Success!</h1>"
+    return HttpResponse(html)
