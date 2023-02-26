@@ -4,4 +4,5 @@ from django.db import models
 
 class Todo(models.Model):
     name = models.CharField(max_length=350)
-    done = models.BooleanField
+    done = models.BooleanField()
+    tiemstamp = models.DateTimeField()
