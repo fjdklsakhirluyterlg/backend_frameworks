@@ -13,3 +13,4 @@ def add_todo(request):
         if form.is_valid():
             title = form.cleaned_data["title"]
             instance = Todo(title)
+            instance.save()
