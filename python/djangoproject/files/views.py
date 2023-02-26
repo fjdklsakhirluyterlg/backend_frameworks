@@ -15,7 +15,7 @@ def file(request):
         if form.is_valid():
             instance = UploadedFile(request.FILES['filename'].name, request.FILES['file'])
             instance.save()
-            return HttpResponseRedirect('uplaod/success')
+            return HttpResponseRedirect('/upload/success')
         else:
             return form.errors
     else:
