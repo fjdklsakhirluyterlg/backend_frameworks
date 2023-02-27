@@ -14,3 +14,4 @@ def add_todo():
     title = data["title"]
     new = Todo(title=title)
     db.session.add(new)
+    db.session.commit()
