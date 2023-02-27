@@ -13,4 +13,4 @@ def add_todo():
     data = request.get_json()
     title = data["title"]
     new = Todo(title=title)
-
+    db.session.add(new)
