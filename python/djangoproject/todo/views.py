@@ -14,3 +14,5 @@ def add_todo(request):
             title = form.cleaned_data["title"]
             instance = Todo(title)
             instance.save()
+    else:
+        return render()
