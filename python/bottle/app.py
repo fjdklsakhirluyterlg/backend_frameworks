@@ -6,6 +6,6 @@ def index(name):
 
 @route("/test")
 def test():
-    return template()
+    return template('<h1>HI</h1>')
 
 run(host='localhost', port=8080)
