@@ -16,3 +16,6 @@ def add_todo(request):
             instance.save()
     else:
         return render()
+
+def show_todo(request):
+    all_todo = Todo.objects.all()
