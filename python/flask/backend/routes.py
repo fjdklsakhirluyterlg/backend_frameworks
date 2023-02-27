@@ -8,7 +8,7 @@ routes = Blueprint(__name__, "routes")
 def index():
     return "hi"
 
-@routes.route("/api/todo/add")
+@routes.route("/api/todo/add", methods=["POST"])
 def add_todo():
     data = request.get_json()
     title = data["title"]
