@@ -21,7 +21,7 @@ def signup(request):
 
             password = form.cleaned_data.get('pass')
 
-            user = authenticate(username=user, password=pass)
+            user = authenticate(username=user, password=password)
 
             login(request, user)
 
