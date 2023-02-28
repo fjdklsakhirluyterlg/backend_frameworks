@@ -44,3 +44,8 @@ def signin(request):
     if request.user.is_authenticated:
 
         return render(request, 'default.html')
+    
+    if request.method == ‘POST’:
+        username = request.POST[‘user’]
+        password = request.POST[‘pass’]
+        user = authenticate(request, username=username, password=password)
