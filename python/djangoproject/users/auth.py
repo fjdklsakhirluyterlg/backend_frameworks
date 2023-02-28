@@ -29,3 +29,9 @@ def signup(request):
         
         else:
             return render(request, 'signup.html', {'form': form})
+    
+    else:
+
+        form = UserCreationForm()
+
+        return render(request, 'signup.html', {'form': form})
