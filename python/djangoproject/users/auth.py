@@ -35,3 +35,14 @@ def signup(request):
         form = UserCreationForm()
 
         return render(request, 'signup.html', {'form': form})
+
+
+rom django.contrib.auth import authenticate, login
+
+from django.contrib.auth.forms import AuthenticationForm
+
+def signin(request):
+
+    if request.user.is_authenticated:
+
+        return render(request, ‘default.html’)
