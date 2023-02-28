@@ -5,6 +5,8 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.forms import AuthenticationForm
 
+from django.contrib.auth import logout
+
 def signup(request):
 
     if request.user.is_authenticated:
@@ -67,3 +69,5 @@ def signin(request):
         form = AuthenticationForm()
 
         return render(request, 'signin.html', {'form': form})
+
+def signout(request):
