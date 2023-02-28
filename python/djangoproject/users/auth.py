@@ -54,10 +54,10 @@ def signin(request):
 
             login(request, user)
 
-            return redirect(‘/’)
+            return redirect('/')
 
         else:
 
             form = AuthenticationForm(request.POST)
 
-            return render(request, ‘signin.html’, {‘form’: form})
+            return render(request, 'signin.html', {'form': form})
