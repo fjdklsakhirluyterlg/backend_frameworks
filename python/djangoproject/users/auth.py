@@ -49,3 +49,15 @@ def signin(request):
         username = request.POST['user']
         password = request.POST['pass']
         user = authenticate(request, username=username, password=password)
+
+        if user is not None:
+
+            login(request, user)
+
+            return redirect(‘/’)
+
+        else:
+
+            form = AuthenticationForm(request.POST)
+
+            return render(request, ‘signin.html’, {‘form’: form})
