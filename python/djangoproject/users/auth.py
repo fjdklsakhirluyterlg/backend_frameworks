@@ -9,7 +9,7 @@ def signup(request):
     if request.user.is_authenticated:
         return redirect("/")
     
-    if request.method == ‘POST’:
+    if request.method == "POST":
 
         form = UserCreationForm(request.POST)
 
@@ -17,12 +17,12 @@ def signup(request):
 
             form.save()
 
-            username = form.cleaned_data.get(‘user’)
+            username = form.cleaned_data.get('user')
 
-            password = form.cleaned_data.get(‘pass’)
+            password = form.cleaned_data.get('pass')
 
             user = authenticate(username=user, password=pass)
 
             login(request, user)
 
-            return redirect(‘/’)
+            return redirect('/')
