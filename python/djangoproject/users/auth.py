@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import AuthenticationForm
 
 def signup(request):
 
@@ -37,12 +38,9 @@ def signup(request):
         return render(request, 'signup.html', {'form': form})
 
 
-rom django.contrib.auth import authenticate, login
-
-from django.contrib.auth.forms import AuthenticationForm
 
 def signin(request):
 
     if request.user.is_authenticated:
 
-        return render(request, ‘default.html’)
+        return render(request, 'default.html')
