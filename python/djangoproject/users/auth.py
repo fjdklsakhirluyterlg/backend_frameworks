@@ -61,3 +61,9 @@ def signin(request):
             form = AuthenticationForm(request.POST)
 
             return render(request, 'signin.html', {'form': form})
+    
+    else:
+
+        form = AuthenticationForm()
+
+        return render(request, 'signin.html', {'form': form})
