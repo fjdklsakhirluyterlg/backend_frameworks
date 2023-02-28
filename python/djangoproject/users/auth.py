@@ -26,3 +26,6 @@ def signup(request):
             login(request, user)
 
             return redirect('/')
+        
+            else:
+                return render(request, ‘signup.html’, {‘form’: form})
