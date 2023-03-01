@@ -7,6 +7,7 @@ class Todo(models.Model):
     title = models.CharField(max_length=350)
     done = models.BooleanField(default=False)
     timestamp = models.DateTimeField(default=now)
+    todolist = models.ForeignKey()
 
 class TodoList(models.Model):
     name = models.Charfield(max_length=350)
