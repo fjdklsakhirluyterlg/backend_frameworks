@@ -9,4 +9,4 @@ class Todo(models.Model):
     timestamp = models.DateTimeField(default=now)
 
 class TodoList(models.Model):
-    name = models.Charfield()
+    name = models.Charfield(max_length=350)
