@@ -8,3 +8,5 @@ class Todo(models.Model):
     done = models.BooleanField(default=False)
     timestamp = models.DateTimeField(default=now)
 
+class TodoList(models.Model):
+    name = models.Charfield()
