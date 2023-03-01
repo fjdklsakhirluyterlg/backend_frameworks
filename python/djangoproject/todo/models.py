@@ -3,11 +3,13 @@ from django.utils.timezone import now
 
 # Create your models here.
 
+
+class TodoList(models.Model):
+    name = models.Charfield(max_length=350)
+
 class Todo(models.Model):
     title = models.CharField(max_length=350)
     done = models.BooleanField(default=False)
     timestamp = models.DateTimeField(default=now)
     todolist = models.ForeignKey(TodoList)
 
-class TodoList(models.Model):
-    name = models.Charfield(max_length=350)
