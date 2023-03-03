@@ -8,7 +8,7 @@ class TodoList(models.Model):
     name = models.Charfield(max_length=350)
 
     def items(self):
-        pass
+        todos = self.objects.all()
 
 class Todo(models.Model):
     title = models.CharField(max_length=350)
