@@ -7,6 +7,9 @@ from django.utils.timezone import now
 class TodoList(models.Model):
     name = models.Charfield(max_length=350)
 
+    def items():
+        pass
+
 class Todo(models.Model):
     title = models.CharField(max_length=350)
     done = models.BooleanField(default=False)
