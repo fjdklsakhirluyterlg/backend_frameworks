@@ -7,7 +7,7 @@ from django.utils.timezone import now
 class TodoList(models.Model):
     name = models.Charfield(max_length=350)
 
-    def items():
+    def items(slef):
         pass
 
 class Todo(models.Model):
