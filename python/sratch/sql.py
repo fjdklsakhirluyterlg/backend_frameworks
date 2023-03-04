@@ -1,1 +1,2 @@
-import curses
+import sqlite3
+
