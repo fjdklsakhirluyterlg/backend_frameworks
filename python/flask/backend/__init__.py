@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from flask_login import current_user, LoginManager
 
 db = SQLAlchemy()
 DB_NAME = "database.db"
