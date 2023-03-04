@@ -20,15 +20,19 @@ def signup(request):
 
             form.save()
 
-            username = form.cleaned_data.get('user')
+            firstname = form.cleaned_data.get('firstname')
+
+            lastname = form.changed_data.get("lastname")
 
             password = form.cleaned_data.get('pass')
 
-            user = authenticate(username=username, password=password)
+
+
+            user = authenticate(firstname=firstname, password=password)
 
             login(request, user)
 
-            user.send_email()
+            user.email_user()
 
             return redirect('/')
         
