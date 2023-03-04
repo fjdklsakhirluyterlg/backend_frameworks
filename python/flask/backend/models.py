@@ -13,3 +13,4 @@ class User(db.Model, UserMixin):
     name = db.Column(db.Text)
     email = db.Column(db.String(150), unique=True)
     password = db.Column(db.String(50))
+    timestamp = db.Column(db.DateTime(), default=datetime.utcnow, index=True)
