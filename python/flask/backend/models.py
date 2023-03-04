@@ -8,5 +8,5 @@ class todo(db.Model):
     completed = db.Column(db.Boolean, default=False)
 
 class User(db.Model, UserMixin):
-
+    id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.Text)
