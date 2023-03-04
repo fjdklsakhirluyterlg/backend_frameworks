@@ -1,4 +1,6 @@
 from . import db
+from flask_login import UserMixin
+
 
 class todo(db.Model):
     title = db.Column(db.String(350))
