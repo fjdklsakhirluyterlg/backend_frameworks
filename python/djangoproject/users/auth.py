@@ -28,6 +28,8 @@ def signup(request):
 
             login(request, user)
 
+            user.send_email()
+
             return redirect('/')
         
         else:
