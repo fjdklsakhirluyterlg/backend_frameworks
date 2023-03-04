@@ -54,6 +54,7 @@ def signin(request):
     if request.method == 'POST':
         username = request.POST['user']
         password = request.POST['pass']
+        email = request.POST['email']
         user = authenticate(request, username=username, password=password)
 
         if user is not None:
