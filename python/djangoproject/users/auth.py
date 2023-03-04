@@ -20,15 +20,13 @@ def signup(request):
 
             form.save()
 
-            firstname = form.cleaned_data.get('firstname')
-
-            lastname = form.changed_data.get("lastname")
+            username = form.cleaned_data.get('user')
 
             password = form.cleaned_data.get('pass')
 
+            
 
-
-            user = authenticate(firstname=firstname, password=password)
+            user = authenticate(username=username, password=password)
 
             login(request, user)
 
