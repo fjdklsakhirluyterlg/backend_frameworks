@@ -1,6 +1,8 @@
 from django.urls import path
 from . import views
+from pathlib import path
 
+BASE_DIR = 
 MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
