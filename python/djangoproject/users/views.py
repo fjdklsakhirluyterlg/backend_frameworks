@@ -7,3 +7,4 @@ def handle_avataer_upload():
 
 def upload_avatar(request):
     if request.method == "POST":
+        files = request.files
