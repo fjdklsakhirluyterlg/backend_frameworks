@@ -1,6 +1,9 @@
 from django.urls import path
 from . import views
 
+MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
 urlpatterns = [
     path('', views.index, name='index'),
     path('file', views.file, name="file"),
