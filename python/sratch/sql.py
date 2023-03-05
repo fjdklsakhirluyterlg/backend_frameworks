@@ -6,4 +6,6 @@ class dbconn:
         self.con = sqlite3.connect(self.file)
         self.cur = self.con.cursor()
     
+    def add(self):
+        cur = self.cur
     
