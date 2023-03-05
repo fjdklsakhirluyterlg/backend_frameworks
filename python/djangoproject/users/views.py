@@ -8,4 +8,4 @@ def handle_avataer_upload():
 def upload_avatar(request):
     if request.method == "POST":
         files = request.files
-        handle_avataer_upload(file)
+        handle_avataer_upload(files)
