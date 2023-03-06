@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 
-def handle_avataer_upload(FILE):
+def handle_avataer_upload(file):
     pass
 
 def upload_avatar(request):
