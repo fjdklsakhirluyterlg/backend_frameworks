@@ -6,5 +6,5 @@ db = Sqlalchemy()
 
 def create_app():
     app = Quart(__name__)
-
+    db.init_app(app)
     return app
