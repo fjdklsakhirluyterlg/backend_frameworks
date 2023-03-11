@@ -5,7 +5,7 @@ from django.utils.timezone import now
 
 
 class TodoList(models.Model):
-    name = models.Charfield(max_length=350)
+    name = models.CharField(max_length=350)
 
     def items(self):
         todos = self.objects.all()
