@@ -16,9 +16,12 @@ def file(request):
             try:
                 instance = UploadedFile(request.FILES['filename'].name, request.FILES['file'])
                 instance.save()
-                return HttpResponseRedirect('/upload/success')
+                
             except Exception as e:
                 print(f"The error is {e}")
+
+            finally:
+                return HttpResponseRedirect('/upload/success')
         else:
             return form.errors
     else:
