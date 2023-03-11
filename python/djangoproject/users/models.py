@@ -13,6 +13,7 @@ from .managers import UserManager
 class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(_('email address'), unique=True)
     user_name = models.CharField(_('user name'), max_length=30, blank=True)
+    USERNAME_FIELD = user_name
     password = models.CharField(_('password'), max_length=128)
     date_joined = models.DateTimeField(_('date joined'), auto_now_add=True)
     is_active = models.BooleanField(_('active'), default=True)
