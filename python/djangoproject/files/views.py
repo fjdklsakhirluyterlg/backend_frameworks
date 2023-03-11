@@ -13,9 +13,12 @@ def file(request):
     if request.method == "POST":
         form = DocumentForm(request.POST, request.FILES)
         if form.is_valid():
-            instance = UploadedFile(request.FILES['filename'].name, request.FILES['file'])
-            instance.save()
-            return HttpResponseRedirect('/upload/success')
+            try:
+                instance = UploadedFile(request.FILES['filename'].name, request.FILES['file'])
+                instance.save()
+                return HttpResponseRedirect('/upload/success')
+            except Exception as e:
+                print(f"The error is {e}")
         else:
             return form.errors
     else:
