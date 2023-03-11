@@ -6,3 +6,5 @@ auth = Blueprint("auth", __name__)
 def login():
     if request.method == "POST":
         data = request.get_json()
+        name = data["name"]
+        password = data["password"]
