@@ -14,5 +14,5 @@ class Todo(models.Model):
     title = models.CharField(max_length=350)
     done = models.BooleanField(default=False)
     timestamp = models.DateTimeField(default=now)
-    todolist = models.ForeignKey(TodoList)
+    todolist = models.ForeignKey(TodoList, on_delete="CASCADE")
 
