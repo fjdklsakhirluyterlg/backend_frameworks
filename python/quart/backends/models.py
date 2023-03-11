@@ -1,2 +1,3 @@
-from quart import Blueprint
+from . import db
+
 
