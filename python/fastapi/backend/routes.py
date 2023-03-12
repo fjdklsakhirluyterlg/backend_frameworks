@@ -1,4 +1,4 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, File, UploadFile
 router = APIRouter(
     tags=["files"],
     prefix="/files"
@@ -10,4 +10,3 @@ async def upload_get():
 
 @router.post("/upload")
 async def upload_post():
-    
