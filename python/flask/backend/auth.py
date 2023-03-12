@@ -1,4 +1,5 @@
 from flask import Blueprint, request, redirect
+from .models import User
 
 auth = Blueprint("auth", __name__)
 
