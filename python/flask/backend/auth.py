@@ -8,4 +8,6 @@ def login():
     if request.method == "POST":
         data = request.get_json()
         name = data["name"]
+        user = User.query.filter_by(name=name).first()
         password = data["password"]
+
