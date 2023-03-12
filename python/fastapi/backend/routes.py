@@ -1,6 +1,7 @@
 from fastapi import APIRouter
 router = APIRouter(
     tags=["files"]
+    prefix="/files"
 )
 
 @router.get("/")
