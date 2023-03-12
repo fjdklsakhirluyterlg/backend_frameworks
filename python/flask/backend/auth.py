@@ -1,5 +1,6 @@
 from flask import Blueprint, request, redirect
 from .models import User
+from flask_login import login_user
 
 auth = Blueprint("auth", __name__)
 
@@ -10,4 +11,7 @@ def login():
         name = data["name"]
         user = User.query.filter_by(name=name).first()
         password = data["password"]
+        if user.password == password:
+            login_user(user)
+
 
