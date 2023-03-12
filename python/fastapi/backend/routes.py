@@ -4,6 +4,10 @@ router = APIRouter(
     prefix="/files"
 )
 
-@router.get("/")
-async def read_users():
+@router.get("/upload")
+async def upload_get():
     return "Upload your files here!"
+
+@router.post("/upload")
+async def upload_post():
+    
