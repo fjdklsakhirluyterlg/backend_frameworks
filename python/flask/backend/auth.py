@@ -14,4 +14,7 @@ def login():
         if user.password == password:
             login_user(user)
 
+@auth.route("/auth/signup")
+def signup():
+    
 
