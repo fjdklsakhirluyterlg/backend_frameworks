@@ -16,5 +16,6 @@ def login():
 
 @auth.route("/auth/signup")
 def signup():
-    
+    if request.methd == "POST":
+        data = request.get_json()
 
